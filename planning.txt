@@ -1,0 +1,6 @@
+Have it be navigatable by Country name
+you can navigate to different sections of the page by sorting in alphebtical order
+for example click on A and you see A names
+
+You can double click a country name and that will take you to a different page where All that countries data will show up
+use retcountries.com api
