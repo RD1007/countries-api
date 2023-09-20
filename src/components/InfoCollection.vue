@@ -32,6 +32,26 @@ export const formatPopulation = (population) => {
             .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
     );
 };
+export const roundingLatLong = (LatLong) => {
+    let lat = LatLong[0];
+    let long = LatLong[1];
+    if ((lat % 1) !== 0) {
+        lat = lat.toFixed(2);
+    }
+    if ((long % 1) !== 0) {
+        long = long.toFixed(2);
+    }
+    let latlong = lat + ", " + long;
+    return latlong;
+};
+export const fetchTimezone = (UTC) => {
+    if (UTC == "UTC") {
+        return "UTC+0:00";
+    }
+    else {
+        return UTC;
+    }
+};
 
 export default {
     name: 'InfoCollection',
