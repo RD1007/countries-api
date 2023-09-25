@@ -9,6 +9,26 @@
   import am5geodata_worldLow from "@amcharts/amcharts5-geodata/worldLow";
   import am5geodata_continentsLow from "@amcharts/amcharts5-geodata/continentsLow"
 
+export const getFixedNames = (ContinentName) => {
+  switch (ContinentName.toLowerCase()) {
+    case 'africa':
+      return 'Africa';
+    case 'antarctica':
+      return 'Antarctic';
+    case 'asia':
+      return 'Asia';
+    case 'europe':
+      return 'Europe';
+    case 'northamerica':
+      return 'North America';
+    case 'oceania':
+      return 'Oceania';
+    case 'southamerica':
+      return 'South America';
+    default:
+      return ContinentName
+  }
+};
 export default {
   methods: {
   navigateToMain(continentId) {
