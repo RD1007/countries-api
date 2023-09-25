@@ -1,6 +1,5 @@
 <template>
     <h3>
-        <FunctionsComponent ref="FunctionsComponent"></FunctionsComponent>
         <div class="countryname">
             {{ this.$route.params.countryName }}
         </div>
@@ -16,7 +15,7 @@
                 </li>
             </ul>
             <div>
-                <img v-if="CoatOfArmsPic" :src="CoatOfArmsPic" class="ArmsSizing" alt="Coat of Arms">
+                <img v-if="CoatOfArmsPic !== 'None'" :src="CoatOfArmsPic" class="ArmsSizing" alt="Coat of Arms">
             </div>
         </div>
     </h3>
@@ -154,6 +153,7 @@ export default {
     },
     mounted() {
         this.formatPopulation();
+        this.fetchCountryInfo();
     },
 }
 </script>
